@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LangostaAhumada_Bran.MainPage"
+             Title="La langosta ahumada">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="25" Spacing="15">
+
+            <Image Source="langosta.png"
+                   HeightRequest="170"
+                   Aspect="AspectFit" />
+
+            <Label Text="Presupuesto para banquete"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Label Text="Ingrese el número de personas:" />
+
+            <Entry x:Name="personas"
+                   Placeholder="Ejemplo: 250"
+                   Keyboard="Numeric" />
+
+            <Button Text="Calcular presupuesto"
+                    Clicked="CalcularPresupuesto_Cliked"
+                    BackgroundColor="Firebrick"
+                    TextColor="White" />
+
+            <Label x:Name="resultado"
+                   FontSize="19"
+                   TextColor="DarkRed"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
