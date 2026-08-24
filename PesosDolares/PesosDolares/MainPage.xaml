@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PesosDolares.MainPage"
+             Title="Conversor MXN a USD">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="20" VerticalOptions="Center">
+
+            <Label Text="Conversor de Pesos Mexicanos a Dólares"
+                   FontSize="22"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center" />
+
+            <Label Text="Cantidad en pesos mexicanos (MXN):" FontSize="14" />
+            <Entry x:Name="EntryPesos"
+                   Placeholder="Ej. 1000"
+                   Keyboard="Numeric" />
+
+            <Label Text="Tipo de cambio (pesos por dólar):" FontSize="14" />
+            <Entry x:Name="EntryTipoCambio"
+                   Placeholder="Ej. 18.50"
+                   Keyboard="Numeric"
+                   Text="18.50" />
+
+            <Button x:Name="BtnConvertir"
+                    Text="Convertir a Dólares"
+                    Clicked="OnConvertirClicked"
+                    BackgroundColor="#2E7D32"
+                    TextColor="White" />
+
+            <Border Stroke="#2E7D32"
+                    Padding="15"
+                    StrokeShape="RoundRectangle 10"
+                    IsVisible="False"
+                    x:Name="FrameResultado">
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="Resultado:" FontAttributes="Bold" />
+                    <Label x:Name="LabelResultado"
+                           FontSize="20"
+                           TextColor="#2E7D32"
+                           FontAttributes="Bold" />
+                </VerticalStackLayout>
+            </Border>
+
+            <Label x:Name="LabelError"
+                   TextColor="Red"
+                   IsVisible="False" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
