@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CuentaRegresiva_Bran.MainPage"
+             Title="Cuenta regresiva">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="25" Spacing="15">
+
+            <Image Source="regresiva.png"
+                   HeightRequest="170"
+                   Aspect="AspectFit" />
+
+            <Label Text="Cuenta regresiva del 10 al 1"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center" />
+
+            <Button Text="Iniciar cuenta regresiva"
+                    Clicked="MostrarCuenta_Clicked"
+                    BackgroundColor="DarkOrange"
+                    TextColor="White" />
+
+            <Label x:Name="resultado"
+                   FontSize="22"
+                   TextColor="DarkRed"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
